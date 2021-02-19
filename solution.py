@@ -34,7 +34,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     # Send MAIL FROM command and print server response
     # Still in the handshaking phase. Specify the sender
     mailserver.starttls()
-    mailFrom = "MAIL FROM: jeg9979@nyu.edu\r\n"
+    mailFrom = "MAIL FROM: <jeg9979@nyu.edu>\r\n"
     clientSocket.send(mailFrom.encode())
     recv2 = clientSocket.recv(1024).decode()
     #print(recv2)
@@ -45,7 +45,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
 
     # Send RCPT TO command and print server response
     # Still in the handshaking phase. Specify the recipient
-    rcptTo = "RCPT TO: <jean.graham@stonybrook.edu> \r\n"
+    rcptTo = "RCPT TO: <jean.graham@stonybrook.edu>\r\n"
     clientSocket.send(rcptTo.encode())
     recv3 = clientSocket.recv(1024).decode()
     #print(recv3)
