@@ -2,14 +2,14 @@ from socket import *
 
 import smtplib 
 
-def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in end
-    msg = "\r\n I love computer networks!"
+def smtp_client(port = 1025, mailserver = "127.0.0.1"): 
+    msg = "\r\n My message"
     endmsg = "\r\n.\r\n"
 
     # Choose a mail server (e.g. Google mail server) if you want to verify the script beyond Gradescope
     mailserver = smtplib.SMTP("smtp.nyu.edu", 465)
 
-    # Create socket called clientSocket and establish a TCP connection with mailserver
+    # Create socket called clientSocket and establish a TCP connection with mailserver and port
     # This is the first step. 220 means the connection is successful
     clientSocket = socket(AF_INET, SOCK_STREAM)
     clientSocket.connect((mailserver, port))
@@ -90,3 +90,6 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv7)
     #print("221 closing connection")
     clientSocket.close()
+    
+if __name__ == '__main__':
+    smtp_client(1025, '127.0.0.1')
