@@ -29,7 +29,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv1)
     if recv1[:3] != '250':
         #print('250 reply not received from server.')
-    #elif recv[:3] == "250":
+    elif recv[:3] == "250":
         #print("Success 1")
 
     # Send MAIL FROM command and print server response.
@@ -41,7 +41,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv2)
     if recv2[:3] != "250":
         #print("250 reply not received from server.")
-    #elif recv[:3] == "250":
+    elif recv[:3] == "250":
         #print("Success 2")
 
     # Send RCPT TO command and print server response.
@@ -52,7 +52,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv3)
     if recv3[:3] != "250":
         #print("250 reply not received from server.")
-    #elif recv[:3] == "250":
+    elif recv[:3] == "250":
         #print("Success 3")
 
     # Send DATA command and print server response.
@@ -62,7 +62,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv4)
     if recv4[:3] != "250":
         #print("250 reply not received from server.")
-    #elif recv4[:3] == "250":
+    elif recv4[:3] == "250":
         #print("Success 4")
 
     # Send message data.
@@ -71,7 +71,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv5)
     if recv5[:3] != "250":
         #print("250 reply not received from server.")
-    #elif recv[:3] == "250":
+    elif recv[:3] == "250":
         #print("Success 5")
 
     # Message ends with a single period.
