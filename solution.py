@@ -89,6 +89,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     recv7 = clientSocket.recv(1024).decode()
     #print(recv7)
     #print("Success 7")
+    #changes
     
     clientSocket.close()
 
