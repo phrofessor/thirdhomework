@@ -19,8 +19,8 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     if recv[:3] != '220':
         #print('220 reply not received from server.')
     elif recv[:3] == "220":
-        #print("Success")
-    
+        #print("Success 220")
+
     # Send HELO command and print server response.
     # This is the SMTP handshake. 250 means the handshake is successful
     heloCommand = 'HELO Alice\r\n'
@@ -29,7 +29,7 @@ def smtp_client(port = 1025, mailserver = "127.0.0.1"): #Fill in start #Fill in 
     #print(recv1)
     if recv1[:3] != '250':
         #print('250 reply not received from server.')
-    elif recv[:3] == "250":
+    elif recv1[:3] == "250":
         #print("Success 1")
     
     # Send MAIL FROM command and print server response.
